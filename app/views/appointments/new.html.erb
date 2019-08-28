@@ -1,0 +1,12 @@
+<<h1> Add Appointment </h1>
+
+<%= form_with(model: @appointments, local: true, class: "ui form") do |f| %>
+    <%# f.label :date %>
+    <%# f.select :date, @appointment { |u| [u.date, u.id] }, placeholder: "Date" %>
+    <%# f.label :doctor %>
+    <%# f.select :doctor, @doctor { |u| [u.name, u.id] }, placeholder: "Doctor" %>
+    <%=f.label :symptom %>
+    <%= f.select :symptom, ["Head", "Shoulders", "Knees", "Toes"] %>
+<br/>
+  <%= f.submit class: "ui green button inverted" %>
+<% end %>
